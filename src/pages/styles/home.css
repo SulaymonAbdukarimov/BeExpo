@@ -1,6 +1,7 @@
 .home_products {
   background-color: #f9f8f4;
 }
+
 .home-product-1,
 .home-product-2,
 .home-product-3 {
@@ -14,8 +15,29 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
+/* .home-product-1:hover::before,
+.home-product-2:hover::before,
+.home-product-3:hover::before {
+  background-color: rgba(0, 0, 0, 0.37);
+  content: "";
+  position: absolute;
+  width: 100%;
+  display: block;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+} */
+
+.home-product--link {
+  color: white;
+}
+.home-product--link:hover {
+  color: rgb(251, 196, 31);
+  transition: all 0.5s ease;
+}
 .home-product-1 > h4,
 .home-product-2 > h4,
 .home-product-3 > h4 {
@@ -31,4 +53,113 @@
 }
 .home-product-3 {
   background-image: url("https://beelove.ancorathemes.com/wp-content/uploads/2016/06/banner3.jpg");
+}
+
+.home_action {
+  padding: 50px 0 50px 0;
+}
+
+.home_action--title {
+  color: #f8b742;
+  font-weight: 700;
+  font-family: "Sansita", sans-serif;
+  font-style: italic;
+  font-size: 40px;
+}
+
+.home-action__wrapper a {
+  font-size: 20px;
+  color: #6f503c;
+}
+.home-action__wrapper a:hover {
+  color: #f8b742;
+  transition: all 0.5s ease;
+}
+.home-action__wrapper p {
+  color: #6f503c;
+}
+.home_honey {
+  background-image: url(https://beelove.ancorathemes.com/wp-content/uploads/2016/06/Parallax_1-1.jpg);
+  background-size: cover;
+  padding: 50px 0 100px 0;
+}
+
+.home_honey-title {
+  color: #fff;
+  text-align: center;
+  padding-top: 80px;
+  font-size: 37px;
+  font-family: "sansita one", cursive;
+  line-height: 1.01em;
+  padding-bottom: 20px;
+  font-weight: 900;
+}
+.home_honey-subtitle {
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-family: arimo, sans-serif;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+.home_link {
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 100px;
+  width: 200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+.home_link:hover {
+  border: 2px solid #f8b742;
+  background-color: #f8b742;
+  transition: all 0.5s ease;
+}
+
+.home-blog {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.home-blog_title {
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-family: sansita one, cursive;
+  font-weight: 900;
+  line-height: 1em;
+  letter-spacing: 2px;
+  color: #f8b742;
+  font-style: italic;
+}
+
+.home-blog-item span {
+  color: #8c7363;
+  margin-top: 15px;
+}
+
+.home-blog-item a {
+  color: #6f503c;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 20px;
+  margin-top: 15px;
+}
+
+.home-blog-item a:hover {
+  color: #f8b742;
+  transition: all 0.5s ease;
+}
+
+.honey-learn {
+  margin-top: 70px;
+  background-image: url(https://beelove.ancorathemes.com/wp-content/uploads/2016/06/bg1.jpg?id=207);
+}
+
+.honey-learn-title {
+  padding: 40px 0 40px 0;
+  font-family: "sansita one", cursive;
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
 }
