@@ -1,6 +1,10 @@
 .home_products {
   background-color: #f9f8f4;
 }
+.home_products .row {
+  padding: 50px 0;
+  box-sizing: border-box;
+}
 
 .home-product-1,
 .home-product-2,
@@ -9,27 +13,12 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 168.312px;
-  margin-right: 30px;
+  padding: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
 }
-
-/* .home-product-1:hover::before,
-.home-product-2:hover::before,
-.home-product-3:hover::before {
-  background-color: rgba(0, 0, 0, 0.37);
-  content: "";
-  position: absolute;
-  width: 100%;
-  display: block;
-  height: 100%;
-  cursor: pointer;
-  transition: all 0.5s ease;
-} */
 
 .home-product--link {
   color: white;
@@ -55,6 +44,7 @@
   background-image: url("https://beelove.ancorathemes.com/wp-content/uploads/2016/06/banner3.jpg");
 }
 
+/* action */
 .home_action {
   padding: 50px 0 50px 0;
 }
@@ -67,17 +57,19 @@
   font-size: 40px;
 }
 
-.home-action__wrapper a {
+.home__action-link {
   font-size: 20px;
   color: #6f503c;
 }
-.home-action__wrapper a:hover {
+.home__action-link:hover {
   color: #f8b742;
   transition: all 0.5s ease;
 }
 .home-action__wrapper p {
   color: #6f503c;
 }
+
+/* honey */
 .home_honey {
   background-image: url(https://beelove.ancorathemes.com/wp-content/uploads/2016/06/Parallax_1-1.jpg);
   background-size: cover;
@@ -122,6 +114,7 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
 .home-blog_title {
   margin-bottom: 40px;
   font-size: 40px;
@@ -157,12 +150,22 @@
   background-size: cover;
   background-position: center;
 }
-.home__client-text {
+.home__client-title {
   font-family: sansita one, cursive;
 }
 
 .home-client h4 {
   color: #6f503c;
+}
+.home-client-text {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+.home__client-title {
+  margin-bottom: 22px;
+}
+.home__client-name {
+  font-size: 30px;
 }
 
 /* Contact us */
@@ -212,4 +215,81 @@
   background-color: #f8b742;
   transition: all 0.5s ease;
   color: white;
+}
+
+.home__bee .col-12 {
+  border-right: 1px solid #dee2e6;
+}
+.home__contact p {
+  font-size: 20px;
+}
+.home__contact h2 {
+  font-size: 26px;
+}
+@media (max-width: 992px) {
+  .home-product-3,
+  .home-product-1,
+  .home-product-2 {
+    padding: 30px 20px;
+  }
+  .home_honey-title {
+    font-size: 28px;
+  }
+  .home_link {
+    padding: 7px 15px;
+  }
+  .home-blog {
+    margin: 20px 0;
+  }
+  .home-blog_title {
+    margin-bottom: 20px;
+  }
+  .home-blog-item a {
+    margin-bottom: 10px;
+    margin-top: 0px;
+    font-size: 14px;
+  }
+  .home-blog-item span {
+    margin-top: 5px;
+  }
+  .home-client-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .home__client-title {
+    margin-bottom: 5px;
+  }
+  .home__client-name {
+    font-size: 20px;
+  }
+  .home__contact h2 {
+    font-size: 18px;
+  }
+  .home__contact p {
+    font-size: 16px;
+  }
+  .home__contact--link {
+    padding: 7px 15px;
+    font-size: 16px;
+    width: 180px;
+    font-weight: 300;
+  }
+  .home_honey-title {
+    padding-top: 80px;
+    font-size: 20px;
+    padding-bottom: 15px;
+    font-weight: 700;
+  }
+  .home_link {
+    padding: 10px 20px;
+    border: 2px solid white;
+    width: 180px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .home__bee .col-12 {
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+  }
 }

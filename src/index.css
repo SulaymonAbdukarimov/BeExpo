@@ -7,3 +7,41 @@ body {
   line-height: 1.7;
   font-size: 16px;
 }
+
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+img {
+  max-width: 100%;
+}
+.bee-img {
+  height: 290px;
+  width: 500px;
+}
+.bee-title-content {
+  color: #6f503c;
+}
+
+.home__action-link:hover {
+  color: #f8b742;
+  transition: all 0.5s ease;
+}
+
+.detail_nomi {
+  color: #f8b742;
+  font-weight: 700;
+  font-family: "Sansita", sans-serif;
+  font-style: italic;
+  font-size: 40px;
+}
