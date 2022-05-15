@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function BeeItem({ id, nomi, rasmi, narxi, malumot }) {
   return (
-    <div className=" col-12 col-md-6 col-lg-6 text-center py-4 ">
+    <div className=" col-12 col-md-12 col-lg-6 text-center py-4 ">
       <div className="images img-fluid text-center">
         <img src={rasmi} alt={nomi} className="img-fluid bee-img" />
       </div>
@@ -18,10 +18,10 @@ function BeeItem({ id, nomi, rasmi, narxi, malumot }) {
           className="text-decoration-none"
           href="https://t.me/sulaymon_abdukarimov"
         >
-          <button className="btn btn-outline-danger w-25">Buy</button>
+          <button className="btn telegram btn-outline-danger">Buy</button>
         </a>
-        <Link to={`/ari/${id}`} className="text-decoration-none">
-          <button className="btn btn-outline-primary w-25 my-1 mx-2">
+        <Link to={`/ari/${id}`} className="text-decoration-none ">
+          <button className="btn telegram btn-outline-primary  my-1 mx-2">
             Read More
           </button>
         </Link>

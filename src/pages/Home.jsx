@@ -96,12 +96,12 @@ function Home() {
                 Choose the
               </span>
               <h4>
-                <a
-                  href="#"
+                <Link
+                  to="/ingredients"
                   className="home-product--link text-decoration-none text-center d-block fw-bold fs-2 text-capitalize "
                 >
                   Best Have
-                </a>
+                </Link>
               </h4>
             </div>
             <div className="col-12 col-md-4 col-lg-4  home-product home-product-2 text-center">
@@ -109,12 +109,12 @@ function Home() {
                 Shop
               </span>
               <h4>
-                <a
+                <Link
+                  to="/honey"
                   className="home-product--link text-decoration-none text-center d-block fw-bold fs-2 text-capitalize "
-                  href="#"
                 >
                   best sellers!
-                </a>
+                </Link>
               </h4>
             </div>
             <div className="col-12 col-md-4 col-lg-4 home-product home-product-3 text-center ">
@@ -122,12 +122,12 @@ function Home() {
                 learn to
               </span>
               <h4>
-                <a
-                  href="#"
+                <Link
+                  to="/bee"
                   className=" home-product--link text-center d-block text-decoration-none fw-bold fs-2 text-capitalize "
                 >
                   keep bees
-                </a>
+                </Link>
               </h4>
             </div>
           </div>
@@ -147,9 +147,13 @@ function Home() {
                 alt=""
               />
               <h4 className="mb-3 mt-4">
-                <a className="text-decoration-none home__action-link" href="#">
+                <Link
+                  to="/honey"
+                  className="text-decoration-none home__action-link"
+                  href="#"
+                >
                   Beekeper Honey
-                </a>
+                </Link>
               </h4>
               <p>
                 Professional beekeepers take agreat care of the farm and monitor
@@ -163,9 +167,13 @@ function Home() {
                 alt=""
               />
               <h4 className="mb-3 mt-4">
-                <a className="text-decoration-none home__action-link" href="#">
+                <Link
+                  to="/bee"
+                  className="text-decoration-none home__action-link"
+                  href="#"
+                >
                   Bee Garden
-                </a>
+                </Link>
               </h4>
               <p>
                 We have built a tru cosy garden where our hard working bees
@@ -180,9 +188,13 @@ function Home() {
                 alt=""
               />
               <h4 className="mb-3 mt-4">
-                <a className="text-decoration-none home__action-link" href="#">
+                <Link
+                  to="/ingredients"
+                  className="text-decoration-none home__action-link"
+                  href="#"
+                >
                   Bee Products
-                </a>
+                </Link>
               </h4>
               <p>
                 Our products are 100% organic, produced on a farm with natural
@@ -227,9 +239,12 @@ function Home() {
                 alt="bee"
               />
               <span className="d-block text-center">June 9, 2016</span>
-              <a href="#" className="text-decoration-none d-block text-center">
+              <Link
+                to="/bee"
+                className="text-decoration-none d-block text-center"
+              >
                 Tutorial: Beekeeping Plans, Supplies & Ideas
-              </a>
+              </Link>
             </div>
             <div className=" col-12 col-md-4 col-lg-4 text-center home-blog-item">
               <img
@@ -238,9 +253,12 @@ function Home() {
                 alt="bee"
               />
               <span className="d-block text-center">June 6, 2016</span>
-              <a className="text-decoration-none d-block text-center" href="#">
+              <Link
+                to="/bee"
+                className="text-decoration-none d-block text-center"
+              >
                 Spring Break for Millions of Bees and Their Keepers
-              </a>
+              </Link>
             </div>
             <div className=" col-12 col-md-4 col-lg-4 text-center home-blog-item">
               <img
@@ -249,9 +267,12 @@ function Home() {
                 alt=""
               />
               <span className="d-block text-center">June 3, 2016</span>
-              <a className="text-decoration-none d-block text-center" href="#">
+              <Link
+                to="/bee"
+                className="text-decoration-none d-block text-center"
+              >
                 Tutorial: Beekeeping for Beginners. Breeding Bees
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -279,7 +300,9 @@ function Home() {
       <div className="home__bee">
         <div className="container">
           <div className="my-md-3 my-5 home__bee-title">
-            <h3 className="text-center fw-3 fs-2 mb-3">About Bees</h3>
+            <h3 className="text-center fw-3 fs-2 mb-3 detail_nomi my-4">
+              About Bees
+            </h3>
             <div className="row">
               <div className="col-12 col-md-4 col-lg-4">
                 <div className="home__bee-img text-center">
@@ -296,9 +319,9 @@ function Home() {
                   Queen Bee
                 </h4>
                 <p className="mb-sm-1 mb-md-2 mb-4 text-center">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever.
+                  The Buckfast bee is a breed of honey bee, a cross of many
+                  subspecies and their strains, developed by Brother Adam (born
+                  Karl Kehrle in 1898 in Germany).
                 </p>
                 <Link
                   to="/bee"
@@ -323,9 +346,9 @@ function Home() {
                   Drone Bee
                 </h4>
                 <p className="mb-sm-1 mb-md-2 mb-4 text-center">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever.
+                  Drones carry only one type of allele at each chromosomal
+                  position, because they are haploid (containing only one set of
+                  chromosomes from the mother).
                 </p>
                 <Link
                   to="/bee"
@@ -350,9 +373,9 @@ function Home() {
                   Worker Bee
                 </h4>
                 <p className="mb-sm-1 mb-md-2  mb-4 text-center">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever.
+                  The bees most commonly seen in Australia are European honey
+                  bees (Apis mellifera). They are used to produce honey and
+                  pollinate crops. Asian honey bees are pests in Australia.
                 </p>
                 <Link
                   to="/bee"

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div className="home__footer" style={{ backgroundColor: "#231f1e" }}>
@@ -29,16 +29,34 @@ function Footer() {
                     Products
                   </h6>
                   <p>
-                    <a className="text-white text-decoration-none">Bee</a>
+                    <Link to="/bee" className="text-white text-decoration-none">
+                      Bee
+                    </Link>
                   </p>
                   <p>
-                    <a className="text-white text-decoration-none">Honey</a>
+                    <Link
+                      to="/honey"
+                      className="text-white text-decoration-none"
+                    >
+                      Honey
+                    </Link>
                   </p>
                   <p>
-                    <a className="text-white text-decoration-none">Bee House</a>
+                    <a
+                      target="_blank"
+                      href="https://www.youtube.com/channel/UCEmLDNOhzqTKWP9SbCo0PPA"
+                      className="text-white text-decoration-none"
+                    >
+                      Our YouTube
+                    </a>
                   </p>
                   <p>
-                    <a className="text-white text-decoration-none">Mum</a>
+                    <Link
+                      to="/ingredients"
+                      className="text-white text-decoration-none"
+                    >
+                      Moom
+                    </Link>
                   </p>
                 </div>
 
@@ -49,22 +67,40 @@ function Footer() {
                     Useful links
                   </h6>
                   <p>
-                    <a className="text-white text-decoration-none">
-                      Your Account
+                    <a
+                      target="_blank"
+                      href="https://t.me/sulaymon_abdukarimov"
+                      className="text-white text-decoration-none"
+                    >
+                      My Account
                     </a>
                   </p>
                   <p>
-                    <a className="text-white text-decoration-none">
-                      Become an Affiliate
+                    <a
+                      target="_blank"
+                      href="https://www.youtube.com/watch?v=q8XlAZ1IfqM&list=PL9QoKzgc5yTrNLxy8To6T4qbtBuZyUhJL"
+                      className="text-white text-decoration-none"
+                    >
+                      Special
                     </a>
                   </p>
                   <p>
-                    <a className="text-white text-decoration-none" href="#">
+                    <a
+                      target="_blank"
+                      href="https://www.youtube.com/watch?v=Tp7qzOZGLCs&list=PL9QoKzgc5yTq93sTNNUWlPQU48niIFVom"
+                      className="text-white text-decoration-none"
+                    >
                       Shipping Rates
                     </a>
                   </p>
                   <p>
-                    <a className="text-white text-decoration-none">Help</a>
+                    <a
+                      target="_blank"
+                      href="https://www.youtube.com/c/aUZBEKISTANBEEKEEPERS/about"
+                      className="text-white text-decoration-none"
+                    >
+                      Help
+                    </a>
                   </p>
                 </div>
 

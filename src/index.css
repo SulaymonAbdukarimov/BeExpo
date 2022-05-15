@@ -45,3 +45,9 @@ img {
   font-style: italic;
   font-size: 40px;
 }
+.bottom_cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
