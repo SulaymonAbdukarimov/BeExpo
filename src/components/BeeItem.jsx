@@ -18,10 +18,18 @@ function BeeItem({ id, nomi, rasmi, narxi, malumot }) {
           className="text-decoration-none"
           href="https://t.me/sulaymon_abdukarimov"
         >
-          <button className="btn telegram btn-outline-danger">Buy</button>
+          <button
+            style={{ width: "105px" }}
+            className="btn telegram btn-outline-danger"
+          >
+            Buy
+          </button>
         </a>
         <Link to={`/ari/${id}`} className="text-decoration-none ">
-          <button className="btn telegram btn-outline-primary  my-1 mx-2">
+          <button
+            style={{ width: "105px" }}
+            className="btn telegram btn-outline-primary  my-1 mx-2"
+          >
             Read More
           </button>
         </Link>

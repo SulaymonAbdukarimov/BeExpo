@@ -12,6 +12,7 @@ import Contact from "./pages/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import BeeDetail from "./components/BeeDetail.jsx";
 import HoneyDetail from "./components/HoneyDetail.jsx";
+import IngredientDetail from "./components/IngredientDetail.jsx";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path="/ari/:id" component={BeeDetail} />
         <Route path="/asal/:id" component={HoneyDetail} />
+        <Route path="/ingradient/:id" component={IngredientDetail} />
 
         <Route component={NotFound} />
       </Switch>
