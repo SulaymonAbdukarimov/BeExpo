@@ -4,7 +4,7 @@ function Contact() {
   return (
     <div className="container">
       <section className="mb-4">
-        <h2 className="h1-responsive font-weight-bold text-center my-4 detail_nomi">
+        <h2 className="h1-responsive font-weight-bold text-center my-4  detail_nomi">
           Contact us
         </h2>
         <p className="text-center w-responsive mx-auto mb-5">
@@ -22,40 +22,46 @@ function Contact() {
             >
               <div className="row">
                 <div className="col-md-6">
-                  <div className="md-form mb-4">
+                  <div className="md-form mb-0">
+                    <label for="name" className="">
+                      Your name
+                    </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
                       className="form-control"
                       required
-                      placeholder="Your name"
                     />
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="md-form mb-0">
+                    <label for="email" className="">
+                      Your email
+                    </label>
                     <input
                       type="text"
                       id="email"
                       name="email"
                       className="form-control"
                       required
-                      placeholder="Your email"
                     />
                   </div>
                 </div>
               </div>
               <div className="row">
                 <div className="col-md-12">
-                  <div className="md-form mb-4">
+                  <div className="md-form mb-0">
+                    <label for="subject" className="">
+                      Subject
+                    </label>
                     <input
                       type="text"
                       id="subject"
                       name="subject"
                       className="form-control"
                       required
-                      placeholder=" Subject"
                     />
                   </div>
                 </div>
@@ -63,20 +69,20 @@ function Contact() {
               <div className="row">
                 <div className="col-md-12">
                   <div className="md-form">
+                    <label for="message">Your message</label>
                     <textarea
                       type="text"
                       id="message"
                       name="message"
                       rows="2"
                       className="form-control md-textarea"
-                      placeholder="Your message"
                       required
                     ></textarea>
                   </div>
                 </div>
               </div>
-              <div className="text-center text-md-left mt-4 mb-5">
-                <button type="submit" className="btn btn-primary w-50">
+              <div className="text-center text-md-left">
+                <button className="btn btn-primary w-50 my-5" type="submit">
                   Send
                 </button>
               </div>
@@ -98,7 +104,7 @@ function Contact() {
 
               <li>
                 <i classNameName="fas fa-envelope mt-4 fa-2x"></i>
-                <p> asalarichilik@gmail.com</p>
+                <p>asalarichilik@gmail.com</p>
               </li>
             </ul>
           </div>
