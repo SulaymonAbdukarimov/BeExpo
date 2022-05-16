@@ -1,6 +1,44 @@
 import React from "react";
+import { useState } from "react";
 
 function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [sms, setSms] = useState("");
+
+  let handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      let res = await fetch("https://asalari.pythonanywhere.com/contact", {
+        method: "POST",
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          subject: subject,
+          message: message,
+        }),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
+      let resJson = await res.json();
+      if (res.status === 200) {
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+        setSms("User successfuly sended.");
+      } else {
+        setSms("Some error occured");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="container">
       <section className="mb-4">
@@ -15,9 +53,10 @@ function Contact() {
         <div className="row">
           <div className="col-md-9 mb-md-0 mb-5">
             <form
+              onSubmit={handleSubmit}
               id="contact-form"
               name="contact-form"
-              action="mail.php"
+              action=""
               method="POST"
             >
               <div className="row">
@@ -27,6 +66,8 @@ function Contact() {
                       Your name
                     </label>
                     <input
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       type="text"
                       id="name"
                       name="name"
@@ -41,6 +82,8 @@ function Contact() {
                       Your email
                     </label>
                     <input
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       type="text"
                       id="email"
                       name="email"
@@ -57,6 +100,8 @@ function Contact() {
                       Subject
                     </label>
                     <input
+                      value={subject}
+                      onChange={(e) => setEmail(e.target.value)}
                       type="text"
                       id="subject"
                       name="subject"
@@ -71,6 +116,8 @@ function Contact() {
                   <div className="md-form">
                     <label for="message">Your message</label>
                     <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       type="text"
                       id="message"
                       name="message"
@@ -82,10 +129,15 @@ function Contact() {
                 </div>
               </div>
               <div className="text-center text-md-left">
-                <button className="btn btn-primary w-50 my-5" type="submit">
+                <button
+                  className="btn btn-primary w-50 my-5"
+                  type="submit"
+                  onClick={handleSubmit}
+                >
                   Send
                 </button>
               </div>
+              <div className="sms">{sms ? <p>{sms}</p> : null}</div>
             </form>
 
             <div className="status"></div>

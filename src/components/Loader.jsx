@@ -1,7 +1,8 @@
 import React from "react";
+import "./style/loader.css";
 
 function Loader() {
-  return <h2 style={{ textAlign: "center" }}>Loading...</h2>;
+  return <div class="lds-hourglass"></div>;
 }
 
 export default Loader;

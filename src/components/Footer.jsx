@@ -1,8 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 function Footer() {
   return (
-    <div className="home__footer" style={{ backgroundColor: "#231f1e" }}>
+    <div
+      className="home__footer"
+      style={{
+        backgroundColor: "#231f1e",
+      }}
+    >
       <div className="container ">
         <footer className="text-center text-lg-start text-white">
           <div className="container p-4 pb-0">
@@ -22,9 +28,9 @@ function Footer() {
                   </p>
                 </div>
 
-                <hr className="w-100 clearfix d-md-none" />
+                <hr className="d-none w-100 clearfix d-md-none" />
 
-                <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <div className="d-none d-md-block col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                   <h6 className="text-uppercase mb-4 font-weight-bold">
                     Products
                   </h6>
@@ -104,9 +110,9 @@ function Footer() {
                   </p>
                 </div>
 
-                <hr className="w-100 clearfix d-md-none" />
+                <hr className=" d-none w-100 clearfix d-md-none" />
 
-                <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <div className="d-none d-md-block col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                   <h6 className="text-uppercase mb-4 font-weight-bold">
                     Contact
                   </h6>
