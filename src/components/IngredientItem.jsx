@@ -10,7 +10,7 @@ function IngredientItem({ id, nomi, rasmi, narxi, malumot }) {
         <h3 className="bee-title-content my-2 ">{nomi}</h3>
         <p>{malumot.slice(0, 100)}...</p>
         Price:
-        <span className="badge bg-primary  text-wrap">{narxi}$/L</span>
+        <span className="badge bg-primary  text-wrap">{narxi}$</span>
         <br />
         <div className="bottom_cards">
           <a

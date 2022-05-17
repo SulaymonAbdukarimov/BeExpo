@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "./style/header.css";
 function Header() {
   const [isMobile, setIsMobile] = useState(false);
 
+  const handleResize = () => {
+    if (window.innerWidth > 768) {
+      setIsMobile(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  });
   return (
     <div className="navbar-bg">
       <div className="container">
@@ -15,7 +23,7 @@ function Header() {
           </Link>
           <ul
             className={isMobile ? "nav-links-mobile" : "nav-links"}
-            onclick={() => setIsMobile(false)}
+            onClick={() => setIsMobile(false)}
           >
             <Link className="home" to="/">
               <li>Home</li>

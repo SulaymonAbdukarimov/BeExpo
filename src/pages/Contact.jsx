@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { useState } from "react";
 
@@ -8,32 +9,33 @@ function Contact() {
   const [message, setMessage] = useState("");
   const [sms, setSms] = useState("");
 
-  let handleSubmit = async (e) => {
+  var data = new FormData();
+  data.append("message", message);
+  data.append("email", email);
+  data.append("name", name);
+  data.append("subject", subject);
+
+  var config = {
+    method: "post",
+    url: "https://asalari.pythonanywhere.com/contact",
+    data: data,
+  };
+
+  let handleSubmit = (e) => {
     e.preventDefault();
     try {
-      let res = await fetch("https://asalari.pythonanywhere.com/contact", {
-        method: "POST",
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          subject: subject,
-          message: message,
-        }),
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
+      axios(config).then((res) => {
+        if (res.status === 200) {
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+          console.log(res);
+          setSms("User created successfully");
+        } else {
+          setSms("Some error occured");
+        }
       });
-      let resJson = await res.json();
-      if (res.status === 200) {
-        setName("");
-        setEmail("");
-        setSubject("");
-        setMessage("");
-        setSms("User successfuly sended.");
-      } else {
-        setSms("Some error occured");
-      }
     } catch (err) {
       console.log(err);
     }
@@ -52,13 +54,7 @@ function Contact() {
         </p>
         <div className="row">
           <div className="col-md-9 mb-md-0 mb-5">
-            <form
-              onSubmit={handleSubmit}
-              id="contact-form"
-              name="contact-form"
-              action=""
-              method="POST"
-            >
+            <form id="contact-form" name="contact-form" onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-md-6">
                   <div className="md-form mb-0">
@@ -84,7 +80,7 @@ function Contact() {
                     <input
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      type="text"
+                      type="email"
                       id="email"
                       name="email"
                       className="form-control"
@@ -101,7 +97,7 @@ function Contact() {
                     </label>
                     <input
                       value={subject}
-                      onChange={(e) => setEmail(e.target.value)}
+                      onChange={(e) => setSubject(e.target.value)}
                       type="text"
                       id="subject"
                       name="subject"
@@ -129,11 +125,7 @@ function Contact() {
                 </div>
               </div>
               <div className="text-center text-md-left">
-                <button
-                  className="btn btn-primary w-50 my-5"
-                  type="submit"
-                  onClick={handleSubmit}
-                >
+                <button className="btn btn-primary w-50 my-5" type="submit">
                   Send
                 </button>
               </div>
@@ -155,7 +147,7 @@ function Contact() {
               </li>
 
               <li>
-                <i classNameName="fas fa-envelope mt-4 fa-2x"></i>
+                <i className="fas fa-envelope mt-4 fa-2x"></i>
                 <p>asalarichilik@gmail.com</p>
               </li>
             </ul>
