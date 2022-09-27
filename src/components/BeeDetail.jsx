@@ -8,7 +8,8 @@ import Loader from "./Loader";
 function BeeDetail() {
   const [beeDetail, setBeeDetail] = useState([]);
   const { goBack } = useHistory();
-
+  console.log(useHistory());
+  console.log(goBack);
   const { id } = useParams();
   useEffect(() => {
     fetch(`https://asalari.pythonanywhere.com/ari/${id}`)
@@ -39,7 +40,6 @@ function BeeDetail() {
               <h5 className="my-4 detail_nomi ">
                 Video of this {beeDetail.nomi}
               </h5>
-
               <iframe
                 src={`https://www.youtube.com/embed/${beeDetail.video_link.slice(
                   -11
